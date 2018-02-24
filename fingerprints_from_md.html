@@ -35,6 +35,7 @@
     <div class="container">
         <!-- Example row of columns -->
         <h2>Computing contact fingerprints from an MD simulation</h2>
+        <img class="img-fluid rounded" src="imgs/MD_to_fingerprint.png">
 
         <p>Assume you have two simulations of different molecules represented with the following topology and trajectory
             files:</p>
@@ -42,12 +43,22 @@
             <li><code>top_1.pdb</code> and <code>trj_1.dcd</code></li>
             <li><code>top_2.pdb</code> and <code>trj_2.dcd</code></li>
         </ul>
-        <p>To compute </p>
 
-        <h3>Bash commands:</h3>
+        <p>For each trajectory we first generate a contact list and then set of residue contact frequencies:</p>
         <pre><code class="bash">
+  get_dynamic_contacts.py --topology top_1.pdb --trajectory trj_1.dcd --h-bonds --output contacts_1.tsv
+  get_dynamic_contacts.py --topology top_2.pdb --trajectory trj_2.dcd --h-bonds --output contacts_2.tsv
 
+  get_contact_frequencies.py --input_files contacts_1.tsv -all --output_file resfrequencies_1.tsv
+  get_contact_frequencies.py --input_files contacts_2.tsv -all --output_file resfrequencies_2.tsv
+        </code></pre>
 
+        <p>Next, the residue contact frequencies are combined a plot is written to a png file:</p>
+        <pre><code class="bash">
+  get_contact_fingerprints.py --input_frequencies resfrequencies_1.tsv resfrequencies_2.tsv \
+                              --column_headers Sim1 Sim2 \
+                              --frequency_cutoff 0.6 \
+                              --plot_output fingerprint.png
         </code></pre>
 
         <hr>
