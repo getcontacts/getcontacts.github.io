@@ -84,25 +84,25 @@ body {
 
         <h3>Installing vmd-python and getcontacts on MacOS:</h3>
         <pre><code class="bash">
-          # Dependencies
-          conda install netcdf4 numpy expat tk=8.5
-          brew install netcdf
+  # Dependencies
+  conda install netcdf4 numpy expat tk=8.5
+  brew install netcdf
 
-          # Set up vmd-python library
-          git clone https://github.com/Eigenstate/vmd-python.git
-          cd vmd-python
-          python setup.py build
-          python setup.py install
-          cd ..
+  # Set up vmd-python library
+  git clone https://github.com/Eigenstate/vmd-python.git
+  cd vmd-python
+  python setup.py build
+  python setup.py install
+  cd ..
 
-          # Set up getcontacts library
-          git clone https://github.com/akma327/MDContactNetworks.git getcontacts
-          echo "export PATH=`pwd`/getcontacts:\$PATH" >> ~/.bash_profile
+  # Set up getcontacts library
+  git clone https://github.com/akma327/MDContactNetworks.git getcontacts
+  echo "export PATH=`pwd`/getcontacts:\$PATH" >> ~/.bash_profile
 
-          # Set up "MDCompare" library
-          git clone https://github.com/RasmusFonseca/MDCompare.git
-          echo "export PATH=`pwd`/MDCompare:\$PATH" >> ~/.bash_profile
-          source ~/.bash_profile
+  # Set up "MDCompare" library
+  git clone https://github.com/RasmusFonseca/MDCompare.git
+  echo "export PATH=`pwd`/MDCompare:\$PATH" >> ~/.bash_profile
+  source ~/.bash_profile
         </code></pre>
           <p>You should now be able to run getcontacts scripts, such as <code>get_dynamic_contacts.py</code> from the
             command line</p>
