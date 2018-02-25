@@ -8,6 +8,13 @@ body{
     font-family: 'Asul', sans-serif;
 }
 
+@media screen and (min-width: 650px) {
+    .jumbotron {
+        background: #e9ecef url('/imgs/jumbo/thumb1.png') no-repeat right top;
+        background-size: auto 100%;
+    }
+}
+
 h2{
     margin-bottom: 0.6em;
 }
