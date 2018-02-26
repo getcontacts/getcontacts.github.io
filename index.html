@@ -18,6 +18,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/base.css" rel="stylesheet">
+    <link href="css/recipe-buttons.css" rel="stylesheet">
 
 <style>
 </style>
@@ -105,11 +106,48 @@
 
         <h2>Recipes</h2>
 
-        <ul>
-          <li><a href="fingerprints_from_md.html">Computing contact fingerprints from an MD simulation</a></li>
-          <li><a nohref>Performing time-segment clustering of simulation</a></li>
-          <li><a nohref>Comparing contact networks of crystallographic and NMR structures</a></li>
-        </ul>
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-6">
+              <a href="fingerprints_from_md.html" class="btn btn-recipe">
+                <span class="btn-recipe-panel-left">
+                  <img src="imgs/recipeicons/two-three-sphere-anim.gif">
+                </span>
+                <span class="btn-recipe-label">Compare MD simulations with fingerprints</span>
+                <span class="btn-recipe-panel-right">
+                  <img src="imgs/recipeicons/fingerprint.png">
+                </span>
+              </a>
+            </div>
+
+            <div class="col-lg-6">
+              <a href="fingerprints_from_md.html" class="btn btn-recipe">
+                <span class="btn-recipe-panel-left">
+                  <img src="imgs/recipeicons/one-three-sphere-anim.gif">
+                </span>
+                <span class="btn-recipe-label">Performing time-segment clustering of simulation</span>
+                <span class="btn-recipe-panel-right">
+                  <img src="imgs/recipeicons/segmentation.png">
+                </span>
+              </a>
+            </div>
+
+            <div class="col-lg-6">
+              <a href="fingerprints_from_md.html" class="btn btn-recipe">
+                <span class="btn-recipe-panel-left">
+                  <img src="imgs/recipeicons/two-three-sphere.png">
+                </span>
+                <span class="btn-recipe-label">
+                  Compare crystallographic and NMR structure networks with fingerprints
+                </span>
+                <span class="btn-recipe-panel-right">
+                  <img src="imgs/recipeicons/fingerprint.png">
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
 
         <hr>
 
