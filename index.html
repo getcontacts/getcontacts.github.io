@@ -67,7 +67,7 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
         <div class="container">
-          <h1 class="display-3">Getcontacts</h1>
+          <h1 class="display-3"><a href="index.html">Getcontacts</a></h1>
           <p>Interaction analysis for molecular structures and ensembles</p>
           <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
         </div>
@@ -79,9 +79,9 @@
 
         <h3>Installing vmd-python and getcontacts on MacOS:</h3>
         <pre><code class="bash">
-  # Dependencies
-  conda install netcdf4 numpy expat tk=8.5
-  brew install netcdf
+  # Install dependencies
+  conda install netcdf4 numpy expat tk=8.5  # Alternatively use pip
+  brew install netcdf  # Assumes https://brew.sh/ is installed
 
   # Set up vmd-python library
   git clone https://github.com/Eigenstate/vmd-python.git
@@ -91,16 +91,12 @@
   cd ..
 
   # Set up getcontacts library
-  git clone https://github.com/akma327/getcontacts.git getcontacts
+  git clone https://github.com/getcontacts/getcontacts.git
   echo "export PATH=`pwd`/getcontacts:\$PATH" >> ~/.bash_profile
-
-  # Set up "MDCompare" library
-  git clone https://github.com/RasmusFonseca/MDCompare.git
-  echo "export PATH=`pwd`/MDCompare:\$PATH" >> ~/.bash_profile
   source ~/.bash_profile
         </code></pre>
-          <p>You should now be able to run getcontacts scripts, such as <code>get_dynamic_contacts.py</code> from the
-            command line</p>
+          <p>You should now be able to run scripts, such as <code>get_dynamic_contacts.py</code> from the
+            command line without specifying full path names</p>
 
         <hr>
 
@@ -109,20 +105,20 @@
         <div class="container">
           <div class="row">
 
-            <div class="col-lg-6">
-              <a href="fingerprints_from_md.html" class="btn btn-recipe">
+            <div class="col-lg-12">
+              <a href="trajectory_to_fingerprints.html" class="btn btn-recipe">
                 <span class="btn-recipe-panel-left">
                   <img src="imgs/recipeicons/two-three-sphere-anim.gif">
                 </span>
-                <span class="btn-recipe-label">Compare MD simulations with fingerprints</span>
+                <span class="btn-recipe-label">Compare MD simulations using fingerprints</span>
                 <span class="btn-recipe-panel-right">
                   <img src="imgs/recipeicons/fingerprint.png">
                 </span>
               </a>
             </div>
 
-            <div class="col-lg-6">
-              <a href="fingerprints_from_md.html" class="btn btn-recipe">
+            <div class="col-lg-12">
+              <a href="#" class="btn btn-recipe">
                 <span class="btn-recipe-panel-left">
                   <img src="imgs/recipeicons/one-three-sphere-anim.gif">
                 </span>
@@ -133,8 +129,8 @@
               </a>
             </div>
 
-            <div class="col-lg-6">
-              <a href="fingerprints_from_md.html" class="btn btn-recipe">
+            <div class="col-lg-12">
+              <a href="static_to_fingerprints.html" class="btn btn-recipe">
                 <span class="btn-recipe-panel-left">
                   <img src="imgs/recipeicons/two-three-sphere.png">
                 </span>

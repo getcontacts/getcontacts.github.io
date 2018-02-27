@@ -26,7 +26,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-3">Getcontacts</h1>
+            <h1 class="display-3"><a href="index.html">Getcontacts</a></h1>
             <p>Interaction analysis for molecular structures and ensembles</p>
             <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
         </div>
@@ -34,20 +34,33 @@
 
     <div class="container">
         <!-- Example row of columns -->
-        <h2>Computing contact fingerprints from an MD simulation</h2>
-        <img class="img-fluid rounded" src="imgs/MD_to_fingerprint.png">
+        <h2>Computing contact fingerprints from a set of static structures</h2>
 
-        <p>Assume you have two simulations of different molecules represented with the following topology and trajectory
-            files:</p>
+        <p>The following steps will generate a contact fingerprint for a set of static structures (e.g. PDB-files
+            solved with X-ray crystallography).</p>
         <ul>
-            <li><code>top_1.pdb</code> and <code>trj_1.dcd</code></li>
-            <li><code>top_2.pdb</code> and <code>trj_2.dcd</code></li>
+            <li>The first step extracts atomic-level interactions from the structures.</li>
+            <li>The second step computes residue-level frequencies (will be either 0 or 1) and renames residues
+                according to a <a href="residue_labels.html">residue-label</a> file that conveniently formats labels
+                and acts as alignment.</li>
+            <li>The third step combines the frequency files into a fingerprint heatmap.</li>
+        </ul>
+        <img class="img-fluid rounded img-recipe" src="imgs/static_to_fingerprint.png">
+
+        <hr>
+
+        <h2>Example</h2>
+
+        <p>Given two PDB-files of different molecules, </p>
+        <ul>
+            <li><code>structure_1.pdb</code></li>
+            <li><code>structure_2.pdb</code></li>
         </ul>
 
-        <p>For each trajectory we first generate a contact list and then set of residue contact frequencies:</p>
+        <p>For each structure, first generate a contact list and then the set of residue contact frequencies:</p>
         <pre><code class="bash">
-  get_dynamic_contacts.py --topology top_1.pdb --trajectory trj_1.dcd --h-bonds --output contacts_1.tsv
-  get_dynamic_contacts.py --topology top_2.pdb --trajectory trj_2.dcd --h-bonds --output contacts_2.tsv
+  get_static_contacts.py --topology structure_1.pdb --h-bonds --output contacts_1.tsv
+  get_static_contacts.py --topology structure_2.pdb --h-bonds --output contacts_2.tsv
 
   get_contact_frequencies.py --input_files contacts_1.tsv -all --output_file resfrequencies_1.tsv
   get_contact_frequencies.py --input_files contacts_2.tsv -all --output_file resfrequencies_2.tsv
@@ -56,8 +69,7 @@
         <p>Next, the residue contact frequencies are combined a plot is written to a png file:</p>
         <pre><code class="bash">
   get_contact_fingerprints.py --input_frequencies resfrequencies_1.tsv resfrequencies_2.tsv \
-                              --column_headers Sim1 Sim2 \
-                              --frequency_cutoff 0.6 \
+                              --column_headers "Structure 1" "Structure 2" \
                               --plot_output fingerprint.png
         </code></pre>
 
