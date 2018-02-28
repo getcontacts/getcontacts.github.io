@@ -1,0 +1,1332 @@
+[
+  {
+    "labelid": "gpcr_par1_human",
+    "protein": "par1_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3VW7",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_smo_human",
+    "protein": "smo_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4JKV",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "2RH1",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_todpa",
+    "protein": "opsd_todpa",
+    "proteinFamily": "GPCR",
+    "pdbs": "2Z73",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_oprd_human",
+    "protein": "oprd_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4N6H",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4EIY",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "5DYS",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb1_melga",
+    "protein": "adrb1_melga",
+    "proteinFamily": "GPCR",
+    "pdbs": "4BVN",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_crfr1_human",
+    "protein": "crfr1_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4K5Y",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa1r_human",
+    "protein": "aa1r_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5UEN",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_lpar1_human",
+    "protein": "lpar1_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4Z35",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_acm1_human",
+    "protein": "acm1_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5CXV",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_cxcr4_human",
+    "protein": "cxcr4_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3ODU",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_cnr1_human",
+    "protein": "cnr1_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5TGZ",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_oprx_human",
+    "protein": "oprx_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4EA3",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3SN6",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_ccr9_human",
+    "protein": "ccr9_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5LWE",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "2YDV",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3REY",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_drd3_human",
+    "protein": "drd3_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3PBL",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_grm5_human",
+    "protein": "grm5_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4OO9",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "1GZM",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_oprm_mouse",
+    "protein": "oprm_mouse",
+    "proteinFamily": "GPCR",
+    "pdbs": "5C1M",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_ednrb_human",
+    "protein": "ednrb_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5GLI",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_glr_human",
+    "protein": "glr_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4L6R",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_smo_human",
+    "protein": "smo_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4QIN",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_acm2_human",
+    "protein": "acm2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3UON",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_ox1r_human",
+    "protein": "ox1r_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4ZJ8",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_agtr2_human",
+    "protein": "agtr2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5UNG",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_ox1r_human",
+    "protein": "ox1r_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4ZJC",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_acm2_human",
+    "protein": "acm2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4MQS",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_us28_hcmva",
+    "protein": "us28_hcmva",
+    "proteinFamily": "GPCR",
+    "pdbs": "4XT1",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_oprk_human",
+    "protein": "oprk_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4DJH",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_ntr1_rat",
+    "protein": "ntr1_rat",
+    "proteinFamily": "GPCR",
+    "pdbs": "4GRV",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_acm4_human",
+    "protein": "acm4_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5DSG",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3D4S",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_calcr_human",
+    "protein": "calcr_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5UZ7",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_ox2r_human",
+    "protein": "ox2r_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4S0V",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_hrh1_human",
+    "protein": "hrh1_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3RZE",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_s1pr1_human",
+    "protein": "s1pr1_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3V2Y",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_5ht1b_human",
+    "protein": "5ht1b_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4IAR",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_p2ry1_human",
+    "protein": "p2ry1_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4XNV",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_5ht2b_human",
+    "protein": "5ht2b_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4IB4",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_ednrb_human",
+    "protein": "ednrb_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5GLH",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_ffar1_human",
+    "protein": "ffar1_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4PHU",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_grm1_human",
+    "protein": "grm1_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4OR2",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_ccr5_human",
+    "protein": "ccr5_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4MBS",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_agtr1_human",
+    "protein": "agtr1_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4YAY",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_par2_human",
+    "protein": "par2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5NDD",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_ccr2_human",
+    "protein": "ccr2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5T1A",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_p2y12_human",
+    "protein": "p2y12_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4PXZ",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_acm3_rat",
+    "protein": "acm3_rat",
+    "proteinFamily": "GPCR",
+    "pdbs": "4U15",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_human",
+    "protein": "opsd_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4ZWJ",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_oprm_mouse",
+    "protein": "oprm_mouse",
+    "proteinFamily": "GPCR",
+    "pdbs": "4DKL",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3PWH",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5IUB",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_agtr2_human",
+    "protein": "agtr2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5UNF",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3PDS",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3P0G",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5IU8",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb1_melga",
+    "protein": "adrb1_melga",
+    "proteinFamily": "GPCR",
+    "pdbs": "2Y02",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5G53",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5D5B",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb1_melga",
+    "protein": "adrb1_melga",
+    "proteinFamily": "GPCR",
+    "pdbs": "2Y04",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_grm5_human",
+    "protein": "grm5_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5CGD",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "1L9H",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_human",
+    "protein": "opsd_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5DGY",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_5ht2b_human",
+    "protein": "5ht2b_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4NC3",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3NY8",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_oprd_human",
+    "protein": "oprd_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4RWD",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_cxcr4_human",
+    "protein": "cxcr4_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3OE0",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "2PED",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "2I37",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "1HZX",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_par2_human",
+    "protein": "par2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5NDZ",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5K2C",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_cxcr4_human",
+    "protein": "cxcr4_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3OE8",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_ntr1_rat",
+    "protein": "ntr1_rat",
+    "proteinFamily": "GPCR",
+    "pdbs": "5T04",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "4X1H",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb1_melga",
+    "protein": "adrb1_melga",
+    "proteinFamily": "GPCR",
+    "pdbs": "2Y00",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_ntr1_rat",
+    "protein": "ntr1_rat",
+    "proteinFamily": "GPCR",
+    "pdbs": "4BWB",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3UZC",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "5TE5",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "4J4Q",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "2X72",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_smo_human",
+    "protein": "smo_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5L7I",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb1_melga",
+    "protein": "adrb1_melga",
+    "proteinFamily": "GPCR",
+    "pdbs": "2YCW",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5K2A",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "5TE3",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb1_melga",
+    "protein": "adrb1_melga",
+    "proteinFamily": "GPCR",
+    "pdbs": "3ZPR",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb1_melga",
+    "protein": "adrb1_melga",
+    "proteinFamily": "GPCR",
+    "pdbs": "2Y03",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_5ht2b_human",
+    "protein": "5ht2b_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5TVN",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_todpa",
+    "protein": "opsd_todpa",
+    "proteinFamily": "GPCR",
+    "pdbs": "3AYM",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5UIG",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb1_melga",
+    "protein": "adrb1_melga",
+    "proteinFamily": "GPCR",
+    "pdbs": "2YCX",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_glr_human",
+    "protein": "glr_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5EE7",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_smo_human",
+    "protein": "smo_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5L7D",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5D5A",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3RFM",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3KJ6",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4LDL",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_oprx_human",
+    "protein": "oprx_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5DHH",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_agtr2_human",
+    "protein": "agtr2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5UNH",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_todpa",
+    "protein": "opsd_todpa",
+    "proteinFamily": "GPCR",
+    "pdbs": "3AYN",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_acm3_rat",
+    "protein": "acm3_rat",
+    "proteinFamily": "GPCR",
+    "pdbs": "4DAJ",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb1_melga",
+    "protein": "adrb1_melga",
+    "proteinFamily": "GPCR",
+    "pdbs": "2YCZ",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb1_melga",
+    "protein": "adrb1_melga",
+    "proteinFamily": "GPCR",
+    "pdbs": "2Y01",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "4A4M",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_crfr1_human",
+    "protein": "crfr1_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4Z9G",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_p2y12_human",
+    "protein": "p2y12_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4NTJ",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "3C9M",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_cxcr4_human",
+    "protein": "cxcr4_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3OE6",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5JQH",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_p2ry1_human",
+    "protein": "p2ry1_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4XNW",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_ntr1_rat",
+    "protein": "ntr1_rat",
+    "proteinFamily": "GPCR",
+    "pdbs": "3ZEV",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb1_melga",
+    "protein": "adrb1_melga",
+    "proteinFamily": "GPCR",
+    "pdbs": "5F8U",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb1_melga",
+    "protein": "adrb1_melga",
+    "proteinFamily": "GPCR",
+    "pdbs": "2VT4",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb1_melga",
+    "protein": "adrb1_melga",
+    "proteinFamily": "GPCR",
+    "pdbs": "4AMI",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_p2y12_human",
+    "protein": "p2y12_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4PY0",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_cxcr4_human",
+    "protein": "cxcr4_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3OE9",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "2R4R",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4LDE",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "4PXF",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "3OAX",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_acm2_human",
+    "protein": "acm2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4MQT",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_todpa",
+    "protein": "opsd_todpa",
+    "proteinFamily": "GPCR",
+    "pdbs": "4WW3",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "2YDO",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "3PQR",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb1_melga",
+    "protein": "adrb1_melga",
+    "proteinFamily": "GPCR",
+    "pdbs": "4GPO",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "2R4S",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5IUA",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3NY9",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3NYA",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4GBR",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "4BEZ",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_ntr1_rat",
+    "protein": "ntr1_rat",
+    "proteinFamily": "GPCR",
+    "pdbs": "4XEE",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "2I35",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_acm3_rat",
+    "protein": "acm3_rat",
+    "proteinFamily": "GPCR",
+    "pdbs": "4U14",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_agtr1_human",
+    "protein": "agtr1_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4ZUD",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3VGA",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_smo_human",
+    "protein": "smo_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4QIM",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4QKX",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_ntr1_rat",
+    "protein": "ntr1_rat",
+    "proteinFamily": "GPCR",
+    "pdbs": "4XES",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "2G87",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_cnr1_human",
+    "protein": "cnr1_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5U09",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3EML",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "3PXO",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_us28_hcmva",
+    "protein": "us28_hcmva",
+    "proteinFamily": "GPCR",
+    "pdbs": "4XT3",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "3C9L",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb1_melga",
+    "protein": "adrb1_melga",
+    "proteinFamily": "GPCR",
+    "pdbs": "3ZPQ",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5K2B",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_ntr1_rat",
+    "protein": "ntr1_rat",
+    "proteinFamily": "GPCR",
+    "pdbs": "4BUO",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3UZA",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_oprd_mouse",
+    "protein": "oprd_mouse",
+    "proteinFamily": "GPCR",
+    "pdbs": "4EJ4",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_oprd_human",
+    "protein": "oprd_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4RWA",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_smo_human",
+    "protein": "smo_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4N4W",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_lpar1_human",
+    "protein": "lpar1_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4Z34",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_ntr1_rat",
+    "protein": "ntr1_rat",
+    "proteinFamily": "GPCR",
+    "pdbs": "4BV0",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "4BEY",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_oprx_human",
+    "protein": "oprx_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5DHG",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_acm3_rat",
+    "protein": "acm3_rat",
+    "proteinFamily": "GPCR",
+    "pdbs": "4U16",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_todpa",
+    "protein": "opsd_todpa",
+    "proteinFamily": "GPCR",
+    "pdbs": "2ZIY",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_5ht1b_human",
+    "protein": "5ht1b_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4IAQ",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "2HPY",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "2I36",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "5EN0",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_s1pr1_human",
+    "protein": "s1pr1_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3V2W",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "2J4Y",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4UG2",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_par2_human",
+    "protein": "par2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5NJ6",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_smo_human",
+    "protein": "smo_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4O9R",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5IU4",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "3DQB",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "1U19",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_lpar1_human",
+    "protein": "lpar1_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4Z36",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "1F88",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3VG9",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb1_melga",
+    "protein": "adrb1_melga",
+    "proteinFamily": "GPCR",
+    "pdbs": "5A8E",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb1_melga",
+    "protein": "adrb1_melga",
+    "proteinFamily": "GPCR",
+    "pdbs": "2YCY",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5K2D",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_grm5_human",
+    "protein": "grm5_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5CGC",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "3QAK",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4LDO",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_cxcr4_human",
+    "protein": "cxcr4_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4RWS",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb2_human",
+    "protein": "adrb2_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5D6L",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "4UHR",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_aa2ar_human",
+    "protein": "aa2ar_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5IU7",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_adrb1_melga",
+    "protein": "adrb1_melga",
+    "proteinFamily": "GPCR",
+    "pdbs": "4AMJ",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_opsd_bovin",
+    "protein": "opsd_bovin",
+    "proteinFamily": "GPCR",
+    "pdbs": "3CAP",
+    "labelType": "GPCRdb generic numbering"
+  },
+  {
+    "labelid": "gpcr_glp1r_human",
+    "protein": "glp1r_human",
+    "proteinFamily": "GPCR",
+    "pdbs": "5VEX",
+    "labelType": "GPCRdb generic numbering"
+  }
+]
