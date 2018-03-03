@@ -1,0 +1,9 @@
+[
+  { "protein": "adrb2_human", "proteinFamily": "GPCR", "pdb": "2RH1", "labelType": "GPCRdb" },
+  { "protein": "adrb2_human", "proteinFamily": "GPCR", "pdb": "3SN6", "labelType": "GPCRdb" },
+  { "protein": "adrb2_human", "proteinFamily": "GPCR", "pdb": "3D4S", "labelType": "GPCRdb" },
+  { "protein": "oprd_human", "proteinFamily": "GPCR", "pdb": "4N6H", "labelType": "GPCRdb" },
+  { "protein": "oprd_human", "proteinFamily": "GPCR", "pdb": "4RWD", "labelType": "GPCRdb" },
+  { "protein": "opsd_bovin", "proteinFamily": "GPCR", "pdb": "5DYS", "labelType": "GPCRdb" },
+  { "protein": "opsd_bovin", "proteinFamily": "GPCR", "pdb": "1GZM", "labelType": "GPCRdb" }
+]

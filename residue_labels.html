@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="imgs/favicon.ico">
+
+    <title>Getcontacts - Residue labels</title>
+
+    <!-- Highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- D3 dependency -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+
+    <!-- Custom styles for this page -->
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/residue_labels_table.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3"><a href="index.html">Getcontacts</a></h1>
+          <p>Interaction analysis for molecular structures and ensembles</p>
+          <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <h2>Residue labels</h2>
+        <p>
+          A residue label file is a mapping from residue identifiers used in a structure-file or an MD topology to
+          a generic but unique label that serves the users needs. For example, the following file will map fully
+          generic <code>chain:resname:resid</code> amino acid-identifiers to a more compact single-letter identifier
+          where the chain is implied.
+        </p>
+
+        <hr>
+
+        <div class="row">
+
+          <div class="col-lg-2 col-md-5">
+            <pre><code class="markdown">
+  A:GLU:1 E1
+  A:ARG:2 R2
+  A:VAL:3 V3
+  A:ARG:4 R4
+  ...
+            </code></pre>
+          </div>
+
+          <div class="col-lg-3 col-md-7">
+            <p style="font-style: italic;">The purpose of this is to make the output of getcontacts-scripts more
+              readable. This applies when generating flareplots, or, as in the following example, for fingerprint
+              heatmaps.</p>
+          </div>
+
+          <div class="col-lg-7 col-md-12">
+            <img src="imgs/residue_labels_before-after.svg" width="100%">
+          </div>
+
+        </div>
+
+        <hr>
+
+        <p>Preparing a residue label file requires a bit of work, but once generated it can be reused both when
+          generating residue frequency files [<a href="">example 1</a>] and for generating flareplots [<a
+              href="#">example 2</a>]. Additionally, we've pre-generated generic labels for several classes of
+          proteins:</p>
+
+        <table id="labeltable">
+        </table>
+
+        <p>To download all selected label files paste the following into a terminal:</p>
+        <pre id="labeldownload" contenteditable="true"><code class="bash">
+        </code></pre>
+
+
+        <script>
+
+            const table = d3.select("#labeltable")
+
+            const headData = [
+                {id: "select", text: ""},
+                {id: "pdb", text: "PDB id"},
+                {id: "protein", text: "Protein name"},
+                {id: "proteinFamily", text: "Family"},
+                {id: "labelType", text: "Label type"}
+            ];
+
+            table.append("thead")
+                .append("tr")
+                .selectAll("th").data(headData).enter().append("th")
+                .classed(function(d){ return "column-" + d.id; }, true)
+                .text(function(d){ return d.text; });
+
+
+            var tbody = table.append("tbody").classed("scrollable", true);
+
+            var labeldata;
+
+            d3.json('resources/residuelabels/table.json', function(data) {
+                labeldata = data;
+
+                var rows = tbody.selectAll("tr")
+                    .data(data)
+                    .enter()
+                    .append("tr")
+                    .style("cursor", "pointer")
+                    .on("click", function(d){
+                        const checkbox = this.firstChild.firstChild;
+                        checkbox.checked = !checkbox.checked;
+                        d.selected = checkbox.checked;
+                        elementSelected();
+                    });
+
+                rows.append("td").append("input").attr("type", "checkbox")
+                    .on("click", function(){ d3.event.stopPropagation(); })
+                    .on("change", function (d) {
+                        d.selected = this.checked;
+                        elementSelected();
+                    });
+                rows.append("td").html(function (d) {
+                    return d.pdb;
+                });
+                rows.append("td").html(function (d) {
+                    return d.protein;
+                });
+                rows.append("td").html(function (d) {
+                    return d.proteinFamily;
+                });
+                rows.append("td").html(function (d) {
+                    return d.labelType;
+                });
+            });
+
+
+            function elementSelected(){
+                const selectedData = labeldata.filter(function(d){return d.selected;});
+
+                let downloadCmd = "";
+                if(selectedData.length > 0) {
+                    const selectedURLs = selectedData.map(function (d) {
+                        return "https://getcontacts.github.io/resources/residuelabels/" +
+                            d.labelType + "/" + d.labelType + "_" + d.pdb + ".tsv";
+                    });
+
+                    downloadCmd = "curl --remote-name-all \\\n" + selectedURLs.join(" \\\n");
+                }
+
+                d3.select("#labeldownload")
+                    .select("code")
+                    .text(downloadCmd)
+            }
+        </script>
+
+
+      </div> <!-- /container -->
+
+    </main>
+
+    <footer class="container">
+      <p>&copy; Stanford and authors 2016-2018</p>
+    </footer>
+
+    <script>
+        // hljs.configure({useBR: true});
+        hljs.initHighlightingOnLoad();
+    </script>
+    <!-- Bootstrap core JavaScript
+
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <!--<script src="../../../../assets/js/vendor/popper.min.js"></script>-->
+    <script src="vendor/bootstrap/bootstrap.min.js"></script>
+  </body>
+</html>
+

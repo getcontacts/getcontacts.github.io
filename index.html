@@ -1,140 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="imgs/favicon.ico">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="imgs/favicon.ico">
 
-    <title>Getcontacts</title>
+  <title>Getcontacts</title>
 
-    <!-- Highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <!-- Highlight.js -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 
-    <!-- Bootstrap core CSS -->
-    <!--<link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Bootstrap core CSS -->
+  <!--<link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <!-- Custom styles for this template -->
-    <link href="css/base.css" rel="stylesheet">
-    <link href="css/recipe-buttons.css" rel="stylesheet">
+  <!-- Fontawesome icons -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
-<style>
-</style>
-  </head>
 
-  <body>
+  <!-- Custom styles for this template -->
+  <link href="css/base.css" rel="stylesheet">
+  <link href="css/recipe-list.css" rel="stylesheet">
 
-      <header>
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-        <div class="jumbotron">
-          <div class="container">
-            <h1 class="display-3"><a href="index.html">Getcontacts</a></h1>
-            <p>Interaction analysis for molecular structures and ensembles</p>
-            <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
-          </div>
-          <nav class="navbar navbar-default">
-            <div class="container">
-              <ul class="nav navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="getting_started.html">Getting started</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://github.com/getcontacts/getcontacts">Code</a></li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </header>
+  <style>
+  </style>
+</head>
 
+<body>
+
+<!-- Jumbotron and menu -->
+<header>
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3"><a href="index.html">Getcontacts</a></h1>
+      <p>Interaction analysis for molecular structures and ensembles</p>
+    </div>
+    <nav class="navbar navbar-default">
       <div class="container">
+        <ul class="nav navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="getting_started.html">Installation</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/getcontacts/getcontacts">
+              Github <i class="fab fa-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
 
-        <h2>Recipes</h2>
+<div class="container">
 
-        <div class="container">
-          <div class="row">
+  <div class="row">
+    <div class="col-md-6 recipe">
+      <a href="static_to_fingerprints.html">
+        <div class="recipe-thumb" style="border:1px dashed gray"></div>
+        <h4>Compare interactions across static structures</h4>
+      </a>
+      <p>Example applications:</p>
+      <ul class="recipe-bullet">
+      </ul>
+    </div>
 
-            <div class="col-lg-12">
-              <a href="getting_started.html" class="btn btn-recipe">
-                <span class="btn-recipe-label">Setting up the library on MacOS or Linux</span>
-              </a>
-            </div>
+    <div class="col-md-6 recipe">
+      <a href="trajectory_to_fingerprints.html">
+        <div class="recipe-thumb" style="border:1px dashed gray"></div>
+        <h4>Compare interactions across simulations/ensembles</h4>
+      </a>
+      <p>Example applications:</p>
+      <ul class="recipe-bullet">
+      </ul>
+    </div>
 
-            <div class="col-lg-12">
-              <a href="trajectory_to_fingerprints.html" class="btn btn-recipe">
-                <span class="btn-recipe-panel-left">
-                  <img src="imgs/recipeicons/two-three-sphere-anim.gif">
-                </span>
-                <span class="btn-recipe-label">Compare MD simulations using fingerprints</span>
-                <span class="btn-recipe-panel-right">
-                  <img src="imgs/recipeicons/fingerprint.png">
-                </span>
-              </a>
-            </div>
+    <div class="col-md-6 recipe">
+      <div class="recipe-thumb" style="border:1px dashed gray"></div>
+      <h4>Identify important residues using network analysis</h4>
+      <p>Example applications:</p>
+      <ul class="recipe-bullet">
+      </ul>
+    </div>
 
-            <div class="col-lg-12">
-              <a href="#" class="btn btn-recipe">
-                <span class="btn-recipe-panel-left">
-                  <img src="imgs/recipeicons/one-three-sphere-anim.gif">
-                </span>
-                <span class="btn-recipe-label">Performing time-segment clustering of simulation</span>
-                <span class="btn-recipe-panel-right">
-                  <img src="imgs/recipeicons/segmentation.png">
-                </span>
-              </a>
-            </div>
+    <div class="col-md-6 recipe">
+      <div class="recipe-thumb" style="border:1px dashed gray"></div>
+      <h4>Compare interactions across structures with fingerprints</h4>
+      <p>Example applications:</p>
+      <ul class="recipe-bullet">
+      </ul>
+    </div>
 
-            <div class="col-lg-12">
-              <a href="static_to_fingerprints.html" class="btn btn-recipe">
-                <span class="btn-recipe-panel-left">
-                  <img src="imgs/recipeicons/two-three-sphere.png">
-                </span>
-                <span class="btn-recipe-label">
-                  Compare crystallographic and NMR structure networks with fingerprints
-                </span>
-                <span class="btn-recipe-panel-right">
-                  <img src="imgs/recipeicons/fingerprint.png">
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
+  </div>
+</div>
 
-        <hr>
+<hr>
 
-        <!--<h2>Gallery</h2>-->
-
-        <!--<div class="container">-->
-          <!--<div class="row">-->
-            <!--<div class="col-md-4 border rounded gallerythumb">-->
-              <!--<a nohref>Top7 flareplot</a>-->
-            <!--</div>-->
-            <!--<div class="col-md-4 border rounded gallerythumb">-->
-              <!--<a nohref>Fingerprint of clustered time-segments</a>-->
-            <!--</div>-->
-            <!--<div class="col-md-4 border rounded gallerythumb">-->
-              <!--<a nohref>..</a>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
+</div>
 
 
-      </div> <!-- /container -->
+<footer class="container">
+  <p>&copy; Stanford and authors 2016-2018</p>
+</footer>
 
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Bootstrap core JavaScript
 
-    <footer class="container">
-      <p>&copy; Stanford and authors 2016-2018</p>
-    </footer>
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<!--<script src="../../../../assets/js/vendor/popper.min.js"></script>-->
 
-    <script>hljs.initHighlightingOnLoad();</script>
-    <!-- Bootstrap core JavaScript
-
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <!--<script src="../../../../assets/js/vendor/popper.min.js"></script>-->
-    <script src="vendor/bootstrap/bootstrap.min.js"></script>
-  </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+</body>
 </html>
 

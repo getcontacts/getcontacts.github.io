@@ -1,0 +1,16 @@
+
+ul.recipe-bullet {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.recipe{
+  margin-bottom: 2rem;
+}
+
+.recipe-thumb{
+   width:20rem;
+  height:10rem;
+  float:left;
+}
