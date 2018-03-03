@@ -1,64 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="imgs/favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="imgs/favicon.ico">
 
-    <title>Getcontacts</title>
+  <title>Getcontacts</title>
 
-    <!-- Highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <!-- Highlight.js -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <!-- Custom styles for this template -->
-    <link href="css/base.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/base.css" rel="stylesheet">
 </head>
 
 <body>
 
-<main role="main">
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="display-3"><a href="index.html">Getcontacts</a></h1>
-            <p>Interaction analysis for molecular structures and ensembles</p>
-            <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
-        </div>
-    </div>
-
+<!-- Jumbotron and menu -->
+<header>
+  <div class="jumbotron">
     <div class="container">
-        <!-- Example row of columns -->
-        <h2>Computing contact fingerprints from a set of static structures</h2>
-
-        <p>The following steps will generate a contact fingerprint for a set of static structures (e.g. PDB-files
-            solved with X-ray crystallography).</p>
-        <ul>
-            <li>The first step extracts atomic-level interactions from the structures.</li>
-            <li>The second step computes residue-level frequencies (will be either 0 or 1) and renames residues
-                according to a <a href="residue_labels.html">residue-label</a> file that conveniently formats labels
-                and acts as alignment.</li>
-            <li>The third step combines the frequency files into a fingerprint heatmap.</li>
+      <h1 class="display-3"><a href="index.html">Getcontacts</a></h1>
+      <p>Interaction analysis for molecular structures and ensembles</p>
+    </div>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="getting_started.html">Installation</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/getcontacts/getcontacts">
+              Github <i class="fab fa-github"></i>
+            </a>
+          </li>
         </ul>
-        <img class="img-fluid rounded img-recipe" src="imgs/static_to_fingerprint.png">
+      </div>
+    </nav>
+  </div>
+</header>
 
-        <hr>
+<div class="container">
+  <!-- Example row of columns -->
+  <h2>Computing contact fingerprints from a set of static structures</h2>
 
-        <h2>Example</h2>
+  <p>The following steps will generate a contact fingerprint for a set of static structures (e.g. PDB-files
+    solved with X-ray crystallography).</p>
+  <ul>
+    <li>The first step extracts atomic-level interactions from the structures.</li>
+    <li>The second step computes residue-level frequencies (will be either 0 or 1) and renames residues
+      according to a <a href="residue_labels.html">residue-label</a> file that conveniently formats labels
+      and acts as alignment.</li>
+    <li>The third step combines the frequency files into a fingerprint heatmap.</li>
+  </ul>
 
-        <p>Given two PDB-files of different molecules, </p>
-        <ul>
-            <li><code>structure_1.pdb</code></li>
-            <li><code>structure_2.pdb</code></li>
-        </ul>
+  <div class="row">
+    <div class="col-md-12">
+      <img class="img-responsive img-recipe" src="imgs/static_to_fingerprint.svg">
+    </div>
+  </div>
 
-        <p>For each structure, first generate a contact list and then the set of residue contact frequencies:</p>
-        <pre><code class="bash">
+  <hr>
+
+  <h2>Example</h2>
+
+  <p>Given two PDB-files of different molecules, </p>
+  <ul>
+    <li><code>structure_1.pdb</code></li>
+    <li><code>structure_2.pdb</code></li>
+  </ul>
+
+  <p>For each structure, first generate a contact list and then the set of residue contact frequencies:</p>
+  <pre><code class="bash">
   get_static_contacts.py --topology structure_1.pdb --h-bonds --output contacts_1.tsv
   get_static_contacts.py --topology structure_2.pdb --h-bonds --output contacts_2.tsv
 
@@ -66,21 +84,20 @@
   get_contact_frequencies.py --input_files contacts_2.tsv -all --output_file resfrequencies_2.tsv
         </code></pre>
 
-        <p>Next, the residue contact frequencies are combined a plot is written to a png file:</p>
-        <pre><code class="bash">
+  <p>Next, the residue contact frequencies are combined a plot is written to a png file:</p>
+  <pre><code class="bash">
   get_contact_fingerprints.py --input_frequencies resfrequencies_1.tsv resfrequencies_2.tsv \
                               --column_headers "Structure 1" "Structure 2" \
                               --plot_output fingerprint.png
         </code></pre>
 
-        <hr>
+  <hr>
 
-    </div> <!-- /container -->
+</div> <!-- /container -->
 
-</main>
 
 <footer class="container">
-    <p>&copy; Stanford and authors 2016-2018</p>
+  <p>&copy; Stanford and authors 2016-2018</p>
 </footer>
 
 <script>hljs.initHighlightingOnLoad();</script>

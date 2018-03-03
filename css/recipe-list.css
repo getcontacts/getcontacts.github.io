@@ -10,7 +10,8 @@ ul.recipe-bullet {
 }
 
 .recipe-thumb{
-   width:20rem;
+  width:20rem;
   height:10rem;
   float:left;
+  margin: 0.5rem;
 }

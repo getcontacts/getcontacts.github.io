@@ -8,6 +8,7 @@ body{
   font-family: 'Asul', sans-serif;
   /*margin-bottom: 0;*/
   padding-bottom: 0;
+  padding-top: 30px;
 }
 
 /* Remove page title hyperlink decoration*/
@@ -32,12 +33,21 @@ body{
   }
 }
 
+.hljs{
+  background-color: transparent;
+}
 h2{
   margin-bottom: 0.6em;
 }
 
 h3{
   font-size: 1.3em;
+}
+
+.dashuline{
+  text-decoration-style: dotted;
+  text-decoration-line: underline;
+  text-decoration-color: darkblue;
 }
 
 .gallerythumb{
@@ -52,7 +62,7 @@ img{
 .img-recipe{
   padding-left: 10%;
   padding-right: 10%;
-
+  width:100%;
 }
 
 footer{
