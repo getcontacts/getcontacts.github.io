@@ -96,17 +96,36 @@
 
             const headData = [
                 {id: "select", text: ""},
+                {id: "labelType", text: "Label type"},
                 {id: "pdb", text: "PDB id"},
                 {id: "protein", text: "Protein name"},
                 {id: "proteinFamily", text: "Family"},
-                {id: "labelType", text: "Label type"}
+                {id: "view", text: ""}
             ];
 
             table.append("thead")
                 .append("tr")
                 .selectAll("th").data(headData).enter().append("th")
-                .classed(function(d){ return "column-" + d.id; }, true)
+                .attr("class", function(d){ return "column-" + d.id; })
                 .text(function(d){ return d.text; });
+
+            table.select(".column-select")
+                .append("input")
+                .attr("type", "checkbox")
+                .on("change", function(){
+                    const checkAll = this.checked;
+
+                    // console.log(labeldata);
+                   // labeldata.forEach(function(d){
+                   //     d.selected = true;
+                   // });
+                   tbody.selectAll("input")
+                       .each(function(d) {
+                           this.checked = checkAll;
+                           d.selected = checkAll;
+                           elementSelected();
+                       })
+                });
 
 
             var tbody = table.append("tbody").classed("scrollable", true);
@@ -135,6 +154,9 @@
                         elementSelected();
                     });
                 rows.append("td").html(function (d) {
+                    return d.labelType;
+                });
+                rows.append("td").html(function (d) {
                     return d.pdb;
                 });
                 rows.append("td").html(function (d) {
@@ -143,9 +165,13 @@
                 rows.append("td").html(function (d) {
                     return d.proteinFamily;
                 });
-                rows.append("td").html(function (d) {
-                    return d.labelType;
-                });
+                rows.append("td").append("a")
+                    .on("click", function(){ d3.event.stopPropagation(); })
+                    .attr("href", function(d){
+                        return "resources/residuelabels/"+d.labelType+"/"+d.labelType+"_"+d.pdb+".tsv";
+                    })
+                    .attr("target", "_blank")
+                    .text("View");
             });
 
 
