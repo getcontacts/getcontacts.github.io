@@ -4,7 +4,7 @@
   border-collapse: collapse;
   margin-bottom: 1rem;
   user-select: none;
-  font-size: 0.8rem;
+  font-size: 12px;
 }
 
 #labeltable tbody.scrollable {
