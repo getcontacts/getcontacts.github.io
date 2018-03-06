@@ -7,11 +7,20 @@ ul.recipe-bullet {
 
 .recipe{
   margin-bottom: 2rem;
+  min-height: 10rem;
+}
+
+.recipe h4{
+  font-size: 16px;
+  margin-bottom: 4px;
 }
 
 .recipe-thumb{
-  width:20rem;
   height:10rem;
   float:left;
-  margin: 0.5rem;
+  margin-right: 0.2rem;
+}
+
+.recipe-thumb img{
+  height: 10rem;
 }
