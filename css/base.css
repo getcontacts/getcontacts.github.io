@@ -8,12 +8,18 @@ body{
   font-family: 'Asul', sans-serif;
   /*margin-bottom: 0;*/
   padding-bottom: 0;
-  padding-top: 30px;
+  padding-top: 15px;
 }
 
 /* Remove page title hyperlink decoration*/
 .jumbotron h1 a{
   color: black;
+}
+.jumbotron h1{
+  /*font-size: 45px;*/
+}
+.jumbotron p{
+  /*font-size: 20px;*/
 }
 .jumbotron h1 a:hover {
   text-decoration: none;
@@ -23,7 +29,7 @@ body{
   border: none;
   background-color: transparent;
   margin-bottom: 0;
-  margin-top: 1rem;
+  /*margin-top: 1rem;*/
 }
 
 @media screen and (min-width: 768px) {
