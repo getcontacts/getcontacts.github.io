@@ -80,8 +80,8 @@
   get_static_contacts.py --structure structure_1.pdb --itypes hb --output contacts_1.tsv
   get_static_contacts.py --structure structure_2.pdb --itypes hb --output contacts_2.tsv
 
-  get_contact_frequencies.py --input_files contacts_1.tsv -all --output_file resfrequencies_1.tsv
-  get_contact_frequencies.py --input_files contacts_2.tsv -all --output_file resfrequencies_2.tsv
+  get_contact_frequencies.py --input_files contacts_1.tsv --itypes all --output_file resfrequencies_1.tsv
+  get_contact_frequencies.py --input_files contacts_2.tsv --itypes all --output_file resfrequencies_2.tsv
         </code></pre>
 
   <p>Next, the residue contact frequencies are combined a plot is written to a png file:</p>
