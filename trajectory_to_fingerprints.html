@@ -76,8 +76,8 @@
   get_dynamic_contacts.py --topology top_1.pdb --trajectory trj_1.dcd --itypes hb --output contacts_1.tsv
   get_dynamic_contacts.py --topology top_2.pdb --trajectory trj_2.dcd --itypes hb --output contacts_2.tsv
 
-  get_contact_frequencies.py --input_files contacts_1.tsv -all --output_file resfrequencies_1.tsv
-  get_contact_frequencies.py --input_files contacts_2.tsv -all --output_file resfrequencies_2.tsv
+  get_contact_frequencies.py --input_files contacts_1.tsv --itypes all --output_file resfrequencies_1.tsv
+  get_contact_frequencies.py --input_files contacts_2.tsv --itypes all --output_file resfrequencies_2.tsv
         </code></pre>
 
   <p>Next, the residue contact frequencies are combined a plot is written to a png file:</p>
