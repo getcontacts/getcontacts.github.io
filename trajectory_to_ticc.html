@@ -47,45 +47,48 @@
 
 <div class="container">
   <!-- Example row of columns -->
-  <h2>Computing contact fingerprints from multiple MD simulations</h2>
+  <h2>Performing simulation time-segmentation using TICC</h2>
 
-  <p>The following steps will generate a contact fingerprint for a set of static structures (e.g. PDB-files
-    solved with X-ray crystallography).</p>
+  <p>The following steps will generate a contacts for a simulation, use them as input to TICC clustered
+    time-segmentation, and finally generate a clustermap and flareplot illustrating the differences between each
+    cluster.</p>
   <ul>
     <li>The first step extracts atomic-level interactions.</li>
-    <li>The second step computes residue-level frequencies and renames residues according to a
-      <a href="residue_labels.html">residue-label</a> file</li>
-    <li>The third step combines the frequency files into a fingerprint heatmap.</li>
+    <li>The second step computes TICC time-segment clusters and generates a residue-level frequency file for each
+      cluster (here, k=3). </li>
+    <li>The third step combines the frequency files into a fingerprint heatmap and a flareplot.</li>
   </ul>
 
   <div class="row">
     <div class="col-md-12">
-      <img class="img-responsive img-recipe" src="imgs/MD_to_fingerprint.svg">
+      <img class="img-responsive img-recipe" src="imgs/MD_to_ticc.svg">
     </div>
   </div>
 
-  <p>Assume you have two simulations of different molecules represented with the following topology and trajectory
-    files:</p>
-  <ul>
-    <li><code>top_1.pdb</code> and <code>trj_1.dcd</code></li>
-    <li><code>top_2.pdb</code> and <code>trj_2.dcd</code></li>
-  </ul>
-
-  <p>For each trajectory we first generate a contact list and then set of residue contact frequencies:</p>
+  <p>Assume you have a simulation represented with a topology file, <code>top.pdb</code>, and trajectory file,
+    <code>trj.dcd</code>. We first generate a contact list (<code>contacts.tsv</code>) and a residue contact frequency
+    for each cluster:</p>
   <pre><code class="bash">
-  get_dynamic_contacts.py --topology top_1.pdb --trajectory trj_1.dcd --itypes hb --output contacts_1.tsv
-  get_dynamic_contacts.py --topology top_2.pdb --trajectory trj_2.dcd --itypes hb --output contacts_2.tsv
-
-  get_contact_frequencies.py --input_files contacts_1.tsv --output_file resfrequencies_1.tsv
-  get_contact_frequencies.py --input_files contacts_2.tsv --output_file resfrequencies_2.tsv
+    get_dynamic_contacts.py --topology top.pdb --trajectory trj.dcd --itypes hb --output contacts.tsv
+    get_contact_ticc.py --input_contacts contacts.tsv \
+                        --clusters 3
+                        --tab_output ticc.tsv
+                        --frequency_output segments
         </code></pre>
 
-  <p>Next, the residue contact frequencies are combined a plot is written to a png file:</p>
+  <p>The <code>--frequency_output</code> argument is used as a prefix for cluster-specific residue contact frequency
+    files:</p>
+  <ul>
+    <li>segments_resfreq_cluster000.tsv</li>
+    <li>segments_resfreq_cluster001.tsv</li>
+    <li>segments_resfreq_cluster002.tsv</li>
+  </ul>
+  <p>Finally, the residue contact frequencies are combined into clustermap and flareplot comparison files:</p>
   <pre><code class="bash">
-  get_contact_fingerprints.py --input_frequencies resfrequencies_1.tsv resfrequencies_2.tsv \
-                              --column_headers Sim1 Sim2 \
-                              --frequency_cutoff 0.6 \
-                              --plot_output fingerprint.png
+  get_contact_fingerprints.py --input_frequencies segments_resfreq_cluster*.tsv \
+                              --column_headers Cluster0 Cluster1 Cluster2 \
+                              --plot_output fingerprint.png \
+                              --flare_output compareflare.json \
         </code></pre>
 
   <hr>
