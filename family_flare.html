@@ -47,21 +47,23 @@
 
 <div class="container">
   <!-- Example row of columns -->
-  <h2>Computing contact fingerprints from a set of static structures</h2>
+  <h2>Computing and comparing interaction patterns across a protein family</h2>
 
-  <p>The following steps will generate a contact fingerprint for a set of static structures (e.g. PDB-files
-    solved with X-ray crystallography).</p>
+  <p>The following steps will generate a compare flare for an entire family of proteins using a structural alignment
+    from EBI PDBeFold.</p>
   <ul>
-    <li>The first step extracts atomic-level interactions from the structures.</li>
-    <li>The second step computes residue-level frequencies (will be either 0 or 1) and renames residues
-      according to a <a href="residue_labels.html">residue-label</a> file that conveniently formats labels
-      and acts as alignment.</li>
-    <li>The third step combines the frequency files into a fingerprint heatmap.</li>
+    <li>The first step (top part) is to upload the structures (or a list of PDB-ids) to the
+      <a href="http://www.ebi.ac.uk/msd-srv/ssm/">PDBeFold server</a>, download the resulting XML file, and finally
+      convert it into individual <a href="residue_labels.html">residue label files</a>.</li>
+    <li>The second step (lower left) extracts atomic-level interactions from the structures.</li>
+    <li>The third step computes residue-level frequencies (will be either 0 or 1) and renames residues according to the
+      alignment in the label files.</li>
+    <li>The final step combines the frequency files into a fingerprint heatmap or a compare-flare.</li>
   </ul>
 
   <div class="row">
     <div class="col-md-12">
-      <img class="img-responsive img-recipe" src="imgs/static_to_fingerprint.svg">
+      <img class="img-responsive img-recipe" src="imgs/family-wide_flare.svg">
     </div>
   </div>
 
@@ -69,27 +71,43 @@
 
   <h2>Example</h2>
 
-  <p>Given two PDB-files of different molecules, </p>
+  <p>Given three PDB-files and the <a href="http://www.ebi.ac.uk/msd-srv/ssm/">PDBeFold</a> XML file containing their
+    alignment:</p>
   <ul>
     <li><code>structure_1.pdb</code></li>
     <li><code>structure_2.pdb</code></li>
+    <li><code>structure_3.pdb</code></li>
+    <li><code>match.xml</code></li>
   </ul>
 
+
+  <p>First, split the xml-file into three residue label files:</p>
+  <pre><code class="bash">
+  get_resilabels.py --input_file match.xml --output_prefix labels_
+  </code></pre>
   <p>For each structure, first generate a contact list and then the set of residue contact frequencies:</p>
   <pre><code class="bash">
   get_static_contacts.py --structure structure_1.pdb --itypes hb --output contacts_1.tsv
   get_static_contacts.py --structure structure_2.pdb --itypes hb --output contacts_2.tsv
+  get_static_contacts.py --structure structure_3.pdb --itypes hb --output contacts_2.tsv
 
-  get_contact_frequencies.py --input_files contacts_1.tsv --itypes all --output_file resfrequencies_1.tsv
-  get_contact_frequencies.py --input_files contacts_2.tsv --itypes all --output_file resfrequencies_2.tsv
-        </code></pre>
+  get_contact_frequencies.py --input_files contacts_1.tsv \
+                             --label_file labels_1.tsv \
+                             --itypes all \
+                             --output_file resfrequencies_1.tsv
+  get_contact_frequencies.py --input_files contacts_2.tsv \
+                             --label_file labels_2.tsv \
+                             --itypes all \
+                             --output_file resfrequencies_2.tsv
+  </code></pre>
 
-  <p>Next, the residue contact frequencies are combined a plot is written to a png file:</p>
+  <p>Next, the residue contact frequencies are combined and heatmap and flareplots are written:</p>
   <pre><code class="bash">
-  get_contact_fingerprints.py --input_frequencies resfrequencies_1.tsv resfrequencies_2.tsv \
-                              --column_headers "Structure 1" "Structure 2" \
+  get_contact_fingerprints.py --input_frequencies resfrequencies_*.tsv \
+                              --column_headers "Structure 1" "Structure 2" "Structure 3" \
+                              --flare_output multiflare.json \
                               --plot_output fingerprint.png
-        </code></pre>
+  </code></pre>
 
   <hr>
 
