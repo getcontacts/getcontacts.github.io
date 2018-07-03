@@ -73,15 +73,22 @@
   git clone https://github.com/getcontacts/getcontacts.git
   echo "export PATH=`pwd`/getcontacts:\$PATH" >> ~/.bash_profile
   source ~/.bash_profile
-        </code></pre>
+  </code></pre>
   <p>You should now be able to run scripts, such as <code>get_dynamic_contacts.py</code> from the
     command line without specifying full path names</p>
 
   <hr>
 
   <h2>Getting started on Linux</h2>
-
-  <p>...</p>
+  Make sure you have git and conda installed and then run
+  <pre><code class="bash">
+  conda install -c https://conda.anaconda.org/rbetz vmd-python
+  
+  # Set up getcontacts library
+  git clone https://github.com/getcontacts/getcontacts.git
+  echo "export PATH=`pwd`/getcontacts:\$PATH" >> ~/.bash_profile
+  source ~/.bashrc
+  </code></pre>
 
 
 </div> <!-- /container -->
