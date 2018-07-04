@@ -58,7 +58,11 @@
   <h2>Getting started on MacOS</h2>
 
   <pre><code class="bash">
-  # Install dependencies
+  # Install get_contact_ticc.py dependencies
+  conda install scipy numpy scikit-learn matplotlib pandas cython
+  pip install ticc=0.1.4
+  
+  # Install vmd-python dependencies
   conda install netcdf4 numpy pandas seaborn  expat tk=8.5  # Alternatively use pip
   brew install netcdf pyqt # Assumes https://brew.sh/ is installed
 
@@ -82,11 +86,16 @@
   <h2>Getting started on Linux</h2>
   Make sure you have git and conda installed and then run
   <pre><code class="bash">
+  # Install get_contact_ticc.py dependencies
+  conda install scipy numpy scikit-learn matplotlib pandas cython
+  pip install ticc=0.1.4
+  
+  # Set up vmd-python library
   conda install -c https://conda.anaconda.org/rbetz vmd-python
   
   # Set up getcontacts library
   git clone https://github.com/getcontacts/getcontacts.git
-  echo "export PATH=`pwd`/getcontacts:\$PATH" >> ~/.bash_profile
+  echo "export PATH=`pwd`/getcontacts:\$PATH" >> ~/.bashrc
   source ~/.bashrc
   </code></pre>
 
