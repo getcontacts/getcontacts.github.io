@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="imgs/favicon.ico">
+
+  <title>GetContacts - Protein family comparison</title>
+
+  <!-- Highlight.js -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/base.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Jumbotron and menu -->
+<header>
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3"><a href="index.html">GetContacts</a></h1>
+      <p>Interaction analysis for molecular structures and ensembles</p>
+    </div>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="getting_started.html">Installation</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/getcontacts/getcontacts">
+              Github <i class="fab fa-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <h2>Computing and comparing interaction patterns across a protein family</h2>
+
+  <p>The following steps will generate a compare flare for an entire family of proteins using a structural alignment
+    from EBI PDBeFold.</p>
+  <ul>
+    <li>The first step (top part) is to upload the structures (or a list of PDB-ids) to the
+      <a href="http://www.ebi.ac.uk/msd-srv/ssm/">PDBeFold server</a>, download the resulting XML file, and finally
+      convert it into individual <a href="residue_labels.html">residue label files</a>.</li>
+    <li>The second step (lower left) extracts atomic-level interactions from the structures.</li>
+    <li>The third step computes residue-level frequencies (will be either 0 or 1) and renames residues according to the
+      alignment in the label files.</li>
+    <li>The final step combines the frequency files into a fingerprint heatmap or a compare-flare.</li>
+  </ul>
+
+  <div class="row">
+    <div class="col-md-12">
+      <img class="img-responsive img-recipe" src="imgs/family-wide_flare.svg">
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Example</h2>
+
+  <p>Given three PDB-files and the <a href="http://www.ebi.ac.uk/msd-srv/ssm/">PDBeFold</a> XML file containing their
+    alignment:</p>
+  <ul>
+    <li><code>structure_1.pdb</code></li>
+    <li><code>structure_2.pdb</code></li>
+    <li><code>structure_3.pdb</code></li>
+    <li><code>match.xml</code></li>
+  </ul>
+
+
+  <p>First, split the xml-file into three residue label files:</p>
+  <pre><code class="bash">
+  get_resilabels.py --input_file match.xml --output_prefix labels_
+  </code></pre>
+  <p>For each structure, first generate a contact list and then the set of residue contact frequencies:</p>
+  <pre><code class="bash">
+  get_static_contacts.py --structure structure_1.pdb --itypes hb --output contacts_1.tsv
+  get_static_contacts.py --structure structure_2.pdb --itypes hb --output contacts_2.tsv
+  get_static_contacts.py --structure structure_3.pdb --itypes hb --output contacts_2.tsv
+
+  get_contact_frequencies.py --input_files contacts_1.tsv \
+                             --label_file labels_1.tsv \
+                             --itypes all \
+                             --output_file resfrequencies_1.tsv
+  get_contact_frequencies.py --input_files contacts_2.tsv \
+                             --label_file labels_2.tsv \
+                             --itypes all \
+                             --output_file resfrequencies_2.tsv
+  </code></pre>
+
+  <p>Next, the residue contact frequencies are combined and heatmap and flareplots are written:</p>
+  <pre><code class="bash">
+  get_contact_fingerprints.py --input_frequencies resfrequencies_*.tsv \
+                              --column_headers "Structure 1" "Structure 2" "Structure 3" \
+                              --flare_output multiflare.json \
+                              --plot_output fingerprint.png
+  </code></pre>
+
+  <hr>
+
+</div> <!-- /container -->
+
+<footer class="container">
+  <p>&copy; Stanford and authors 2016-2018</p>
+</footer>
+
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Bootstrap core JavaScript
+
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<!--<script src="../../../../assets/js/vendor/popper.min.js"></script>-->
+<script src="vendor/bootstrap/bootstrap.min.js"></script>
+</body>
+</html>
+

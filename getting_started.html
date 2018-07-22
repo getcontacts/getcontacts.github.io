@@ -34,8 +34,8 @@
 <header>
   <div class="jumbotron">
     <div class="container">
-      <h1 class="display-3"><a href="index.html">Getcontacts</a></h1>
-      <p>Interaction analysis for protein structures and dynamics</p>
+      <h1 class="display-3"><a href="index.html">GetContacts</a></h1>
+      <p>Interaction analysis for molecular structures and ensembles</p>
     </div>
     <nav class="navbar navbar-default">
       <div class="container">
@@ -59,7 +59,11 @@
   <h2>Getting started on MacOS</h2>
 
   <pre><code class="bash">
-  # Install dependencies
+  # Install get_contact_ticc.py dependencies
+  conda install scipy numpy scikit-learn matplotlib pandas cython
+  pip install ticc=0.1.4
+  
+  # Install vmd-python dependencies
   conda install netcdf4 numpy pandas seaborn  expat tk=8.5  # Alternatively use pip
   brew install netcdf pyqt # Assumes https://brew.sh/ is installed
 
@@ -74,15 +78,27 @@
   git clone https://github.com/getcontacts/getcontacts.git
   echo "export PATH=`pwd`/getcontacts:\$PATH" >> ~/.bash_profile
   source ~/.bash_profile
-        </code></pre>
+  </code></pre>
   <p>You should now be able to run scripts, such as <code>get_dynamic_contacts.py</code> from the
     command line without specifying full path names</p>
 
   <hr>
 
   <h2>Getting started on Linux</h2>
-
-  <p>...</p>
+  Make sure you have git and conda installed and then run
+  <pre><code class="bash">
+  # Install get_contact_ticc.py dependencies
+  conda install scipy numpy scikit-learn matplotlib pandas cython
+  pip install ticc=0.1.4
+  
+  # Set up vmd-python library
+  conda install -c https://conda.anaconda.org/rbetz vmd-python
+  
+  # Set up getcontacts library
+  git clone https://github.com/getcontacts/getcontacts.git
+  echo "export PATH=`pwd`/getcontacts:\$PATH" >> ~/.bashrc
+  source ~/.bashrc
+  </code></pre>
 
 
 </div> <!-- /container -->
