@@ -3,6 +3,8 @@ fetch 5xnd, async=0
 set state, 14
 
 remove !resi 58+97
+remove hydro
+h_add
 
 bg_color white
 color gray80, elem C
