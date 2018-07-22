@@ -7,7 +7,7 @@
   <meta name="author" content="">
   <link rel="icon" href="imgs/favicon.ico">
 
-  <title>Getcontacts</title>
+  <title>GetContacts - Interaction types</title>
 
   <!-- Highlight.js -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
@@ -26,6 +26,10 @@
   <link href="css/recipe-list.css" rel="stylesheet">
 
   <style>
+    .interaction-fig{
+      width: 200px;
+    }
+
   </style>
 </head>
 
@@ -43,6 +47,7 @@
         <ul class="nav navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="getting_started.html">Installation</a></li>
+          <li class="nav-item"><a class="nav-link" href="interactions.html">Interaction types</a></li>
           <li class="nav-item">
             <a class="nav-link" href="https://github.com/getcontacts/getcontacts">
               Github <i class="fab fa-github"></i>
@@ -57,80 +62,60 @@
 
 <div class="container">
   <p>
-    Virtually all fundamental biological processes are driven by proteins. The molecular
-    functions of proteins (e.g. ligand-binding) are governed by networks of molecular interactions such as
-    hydrogen bonds and van der Waals interactions
+    The following table defines criteria for interactions that are recognized by GetContacts. All numerical values can
+    be changed from the command-line if needed.
   </p>
 
-  <div class="panel panel-default">
-    <div class="panel-body">
-  <ul style="margin-bottom:0px">
-    <li>Which are the key residues and interactions in your protein?</li>
-    <!--<li>What are the most prominent commonalities and differences between interactions in different conditions?</li>-->
-    <li>How do these interactions change under different states and conditions?</li>
-    <!--<li>How does the interaction network evolve in computational simulations?</li>-->
-  </ul>
-      </div>
-  </div>
-  <p>
-    Answer these questions and many other such questions using 'getcontacts' - a package developed
-    exclusively to dissect and visualize molecular interactions from structures and dynamics of proteins.
-    Getcontacts is equipped to handle structures and dynamics data from a variety of technologies including X-ray
-    crystallography, NMR, Cryo-EM, and MD simulations.
-  </p>
-</div>
-
-<div class="container">
-
-
-  <!--<div class="panel panel-primary">-->
-    <!--<div class="panel-heading">Recipes</div>-->
-    <!--<div class="panel-body">-->
-  <h3>Recipes</h3>
-
-  <div class="row">
-    <div class="col-md-6 recipe">
-      <a href="static_to_fingerprints.html">
-        <div class="recipe-thumb">
-          <img src="imgs/recipeicons/two-panel_singles-to-freq.png">
-        </div>
-        <h4>Compare interactions across static structures</h4>
-      </a>
-      <p>Example applications:</p>
-      <ul class="recipe-bullet">
-        <li>- Contact networks of proteins from different experimental conditions</li>
-      </ul>
-    </div>
-
-    <div class="col-md-6 recipe">
-      <a href="trajectory_to_fingerprints.html">
-        <div class="recipe-thumb">
-          <img src="imgs/recipeicons/two-panel_sim-to-freq.gif">
-        </div>
-        <h4>Compare interactions across simulations/ensembles</h4>
-      </a>
-      <p>Example applications:</p>
-      <ul class="recipe-bullet">
-        <li>- Compare interaction network of the same receptor with different ligands</li>
-        <li>- Compare interaction network of protein in different conditions (solvation, salt-concentration,
-          phosphorylation etc.)</li>
-      </ul>
-    </div>
-
-    <div class="col-md-6 recipe">
-      <a href="trajectory_to_ticc.html">
-        <div class="recipe-thumb">
-          <img src="imgs/recipeicons/two-panel_onesim-ticc.gif">
-        </div>
-        <h4>Identify and compare simulation substate contacts</h4>
-      </a>
-      <p>Example applications:</p>
-      <ul class="recipe-bullet">
-        <li>- Identify substates in MCMC simulations</li>
-        <li>- Characterize ligand binding pocket poses</li>
-      </ul>
-    </div>
-  </div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Interaction type</th>
+      <th scope="col">Illustration</th>
+      <th scope="col">Geometric criteria</th>
+      <th scope="col">Chemical criteria</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>
+        Hydrogen bond
+        <ul>
+          <li>hbbb - backbone to backbone</li>
+          <li>hbsb - side-chain to backbone</li>
+          <li>hbss - side-chain to side-chain</li>
+          <li>lbs - ligand to side-chain</li>
+          <li>lbb - ligand to backbone</li>
+        </ul>
+      </td>
+      <td><img src="resources/interactions/fig_hb.png" class="interaction-fig"></td>
+      <td>
+        |AD| < 3.5Å<br>
+        ∠AHD < 70°
+      </td>
+      <td>A (acceptor) and D (donor) can be any atom except hydrogen, carbon or sulphur</td>
+    </tr>
+    <tr>
+      <td>Salt bridge (sb)</td>
+      <td><img src="resources/interactions/fig_sb.png" class="interaction-fig"></td>
+      <td>|AC| < 4.0Å</td>
+      <td>
+        A (anion): ASP/OD1+OD2, GLU/OE1+OE2<br>
+        C (cation): LYS/NZ, ARG/NH1+NH2, HIS+HSD+HSE+HSP+HIE+HIP+HID/ND1+NE2</td>
+    </tr>
+    <tr>
+      <td>Pi-cation (pc)</td>
+      <td><img src="resources/interactions/fig_pc.png" class="interaction-fig"></td>
+      <td>
+        |AC| < 6.0Å<br>
+        ∠CAn < 60°
+      </td>
+      <td>
+        A (aromatic): center(PHE/CG+CE1+CE2), center(TRP/CD2+CZ2+CZ3), center(TYR/CG+CE1+CE2)<br>
+        C (cation): LYS/NZ, ARG/NH1+NH2, HIS/ND1+NE2<br>
+      </td>
+    </tr>
+    </tbody>
+  </table>
 
 </div>
 
