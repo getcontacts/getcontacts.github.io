@@ -23,13 +23,15 @@
 
   <!-- Custom styles for this template -->
   <link href="css/base.css" rel="stylesheet">
-  <link href="css/recipe-list.css" rel="stylesheet">
 
   <style>
     .interaction-fig{
       width: 200px;
     }
 
+    strong{
+      font-weight: bold;
+    }
   </style>
 </head>
 
@@ -67,6 +69,10 @@
   </p>
 
   <table class="table">
+    <col>
+    <col>
+    <col>
+    <col style="width:40%">
     <thead>
     <tr>
       <th scope="col">Interaction type</th>
@@ -76,6 +82,7 @@
     </tr>
     </thead>
     <tbody>
+
     <tr>
       <td>
         Hydrogen bond
@@ -92,16 +99,31 @@
         |AD| < 3.5Å<br>
         ∠AHD < 70°
       </td>
-      <td>A (acceptor) and D (donor) can be any atom except hydrogen, carbon or sulphur</td>
+      <td>
+        <p>
+          A (acceptor) and D (donor) are any atom except hydrogen, carbon or sulphur
+        </p>
+        <p>
+          Ligands supported
+        </p>
+      </td>
     </tr>
+
     <tr>
       <td>Salt bridge (sb)</td>
       <td><img src="resources/interactions/fig_sb.png" class="interaction-fig"></td>
       <td>|AC| < 4.0Å</td>
       <td>
-        A (anion): ASP/OD1+OD2, GLU/OE1+OE2<br>
-        C (cation): LYS/NZ, ARG/NH1+NH2, HIS+HSD+HSE+HSP+HIE+HIP+HID/ND1+NE2</td>
+        <p>
+          A (anion): ASP/OD1+OD2, GLU/OE1+OE2<br>
+          C (cation): LYS/NZ, ARG/NH1+NH2, HIS+HSD+HSE+HSP+HIE+HIP+HID/ND1+NE2
+        </p>
+        <p>
+          Ligands <strong>not</strong> supported
+        </p>
+      </td>
     </tr>
+
     <tr>
       <td>Pi-cation (pc)</td>
       <td><img src="resources/interactions/fig_pc.png" class="interaction-fig"></td>
@@ -110,10 +132,86 @@
         ∠CAn < 60°
       </td>
       <td>
-        A (aromatic): center(PHE/CG+CE1+CE2), center(TRP/CD2+CZ2+CZ3), center(TYR/CG+CE1+CE2)<br>
-        C (cation): LYS/NZ, ARG/NH1+NH2, HIS/ND1+NE2<br>
+        <p>
+          A (aromatic): center(PHE/CG+CE1+CE2), center(TRP/CD2+CZ2+CZ3), center(TYR/CG+CE1+CE2)<br>
+          C (cation): LYS/NZ, ARG/NH1+NH2, HIS/ND1+NE2<br>
+        </p>
+        <p>
+          Ligands <strong>not</strong> supported
+        </p>
       </td>
     </tr>
+
+    <tr>
+      <td>Pi-stacking (ps)</td>
+      <td><img src="resources/interactions/fig_ps.png" class="interaction-fig"></td>
+      <td>
+        |A1A2| < 7.0Å<br>
+        ∠(n1, n2) < 30°<br>
+        ∠(n1, A1A2) < 45°<br>
+        ∠(n2, A1A2) < 45°<br>
+      </td>
+      <td>
+        <p>
+          A1, A2 (aromatic rings): center(PHE/CG+CE1+CE2), center(TRP/CD2+CZ2+CZ3), center(TYR/CG+CE1+CE2)<br>
+        </p>
+        <p>
+          Ligands <strong>not</strong> supported
+        </p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>T-stacking (ts)</td>
+      <td><img src="resources/interactions/fig_ts.png" class="interaction-fig"></td>
+      <td>
+        |A1A2| < 5.0Å<br>
+        60° < ∠(n1, n2) < 90°<br>
+        ∠(n1, A1A2) < 45°<br>
+        ∠(n2, A1A2) < 45°<br>
+      </td>
+      <td>
+        <p>
+          A1, A2 (aromatic rings): center(PHE/CG+CE1+CE2), center(TRP/CD2+CZ2+CZ3), center(TYR/CG+CE1+CE2)<br>
+        </p>
+        <p>
+          Ligands <strong>not</strong> supported
+        </p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Hydrophobic (hp)</td>
+      <td><img src="resources/interactions/fig_hp.png" class="interaction-fig"></td>
+      <td>
+        |AB| < R<sub>vdw</sub>(A) + R<sub>vdw</sub>(B) + 0.5
+      </td>
+      <td>
+        <p>
+          A, B: ALA+CYS+PHE+GLY+ILE+LEU+MET+PRO+VAL+TRP and element C or S
+        </p>
+        <p>
+          Ligands supported
+        </p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>van der Waals (vdw)</td>
+      <td><img src="resources/interactions/fig_vdw.png" class="interaction-fig"></td>
+      <td>
+        |AB| < R<sub>vdw</sub>(A) + R<sub>vdw</sub>(B) + 0.5
+      </td>
+      <td>
+        <p>
+          A and B are any non-hydrogen atoms
+        </p>
+        <p>
+          Ligands supported
+        </p>
+      </td>
+    </tr>
+
     </tbody>
   </table>
 
