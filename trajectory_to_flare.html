@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="imgs/favicon.ico">
+
+  <title>GetContacts - Time segmentation and clustering</title>
+
+  <!-- Highlight.js -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/base.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Jumbotron and menu -->
+<header>
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3"><a href="index.html">GetContacts</a></h1>
+      <p>Interaction analysis for molecular structures and ensembles</p>
+    </div>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="getting_started.html">Installation</a></li>
+          <li class="nav-item"><a class="nav-link" href="interactions.html">Interaction types</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/getcontacts/getcontacts">
+              Github <i class="fab fa-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <h2>Interactive flareplot residue-contact visualization of a trajectory</h2>
+
+  <p>The following steps will generate contacts from a simulation trajectory and convert them to a json file that can
+    be uploaded and analyzed at <a href="https://gpcrviz.github.io/flareplot">
+      gpcrviz.github.io/flareplot</a>.</p>
+
+  <div class="row">
+    <div class="col-md-12">
+      <img class="img-responsive img-recipe" src="imgs/MD_to_flare.svg">
+    </div>
+  </div>
+
+  <p>Assume you have a simulation represented with a topology file, <code>top.pdb</code>, and trajectory file,
+    <code>trj.dcd</code>. We first generate a contact list (<code>contacts.tsv</code>) and then generate the time-flare
+    (<code>flareplot.json</code>) with the commands:</p>
+  <pre><code class="bash">
+    get_dynamic_contacts.py --topology top.pdb --trajectory trj.dcd --itypes hb --output contacts.tsv
+    get_contact_flare.py --input contacts.tsv --output flareplot.json
+  </code></pre>
+
+  <p>Finally, go to <a href="https://gpcrviz.github.io/flareplot/?p=create">gpcrviz.github.io/flareplot/?p=create</a>
+    and upload the <code>flareplot.json</code> file.</p>
+
+  <hr>
+
+  <h3>Filtering interactions</h3>
+
+  <p>If you are interested in only a subset of interactions there's two ways of getting these. The first is to use the
+  <code>--sele</code> and <code>--sele2</code> arguments when computing contacts. If, for example, you're only
+    interested in interactions between residues 18-19 and 81-82 run:</p>
+  <pre><code class="bash">
+    get_dynamic_contacts.py --topology top.pdb \
+                            --trajectory trj.dcd \
+                            --itypes hb \
+                            --sele "resid 18 to 19" \
+                            --sele2 "resid 81 to 82" \
+                            --output contacts.tsv
+    get_contact_flare.py --input contacts.tsv --output flareplot.json
+  </code></pre>
+  <p>Alternatively, you can generate all contacts and use a residue label file (see definition
+    <a href="residue_labels.html">here</a>) to decorate the flareplot with colors and edge-bundling as well as
+    filtering away undesired residues:</p>
+  <pre><code class="bash">
+    get_dynamic_contacts.py --topology top.pdb --trajectory trj.dcd --itypes hb --output contacts.tsv
+    cat reslabels.tsv
+      A:CYS:18  CYS18  red
+      A:HIS:19  HIS19  red
+      A:ALA:81  ALA81  blue
+      A:ILE:82  ILE82  blue
+    get_contact_flare.py --input contacts.tsv --flarelabels reslabels.tsv --output flareplot.json
+  </code></pre>
+
+  <hr>
+
+</div> <!-- /container -->
+
+<footer class="container">
+  <p>&copy; Stanford and authors 2016-2018</p>
+</footer>
+
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Bootstrap core JavaScript
+
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<!--<script src="../../../../assets/js/vendor/popper.min.js"></script>-->
+<script src="vendor/bootstrap/bootstrap.min.js"></script>
+</body>
+</html>
+
